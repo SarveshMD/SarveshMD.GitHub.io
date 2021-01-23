@@ -1,0 +1,129 @@
+body {
+	background-color: #F69680;
+	font-family: Ubuntu;
+}
+
+#main_image {
+	transition: 0.5s;
+	display: none;
+	width  : 900px;
+	height : 720px;
+	border : 2px solid #ff0095;
+}
+
+#main_image:hover {
+	transition: 0.5s;
+	border : 2px solid #2E1263;
+}
+
+#load_img {
+	position: relative;
+	top: 55%;
+}
+
+#waiting {
+	font-size: 20px;
+	color: #ff0077b2;
+	font-weight: bold;
+}
+
+#full {
+	display:flex;
+	flex-direction:column;
+	align-items:center;
+	justify-content:center;
+}
+
+h1 {
+	color :  #2E1263;
+	font-size: 3rem;
+	margin-bottom : 10px;
+	margin-top: 10px;
+}
+
+h2 {
+	color : #e20c77;
+	font-size: 2rem;
+	margin-top: 10px;
+	margin-bottom : 10px;
+}
+
+#explanation {
+	color : #63012a;
+	margin-top: 10px;
+	font-size: 17px;
+}
+
+
+p {
+	color: rgb(85, 0, 134);
+}
+
+#selectdate {
+	transition: 1s;
+	font-family: Source-Code-Pro;
+	text-transform: uppercase;
+	border: none;
+	height : 40px;
+	width  : 250px;
+	background-color: #2E1263;
+	color:  #F69680;
+	margin-top: 0px;
+	text-align: center;
+	content: "";
+	font-size: 19px;
+	margin-left: 60px;
+}
+
+#selectdate:hover {
+	background-color: #ff0095;
+	color: #e4d506;
+	transition: 1s;
+}
+
+
+#outer{
+	width:100%;
+	text-align: center;
+	margin-bottom: 20px;
+	display:flex;
+	flex-direction:row;
+	align-items:center;
+	justify-content:center;
+}
+.inner {
+	display: inline-block;
+}
+
+#go {
+	transition: 1s;
+	font-family: Source-Code-Pro;
+	border-left: 2px solid #F69680;
+	border-right: none;
+	border-top: none;
+	border-bottom: none;
+	height : 40px;
+	width  : 50px;
+	background-color: #2E1263;
+	color:  #F69680;
+	margin-top: 0px;
+	margin-right: 60px;
+	text-align: center;
+	font-size: 19px;
+}
+
+#go:hover {
+	background-color: #ff0095;
+	color: #e4d506;
+	transition: 1s;
+}
+
+#loader {
+	position: absolute;
+	top: 40%;
+	right: 45%;
+	border: none;
+	width: 10%;
+	height: 15%;
+	visibility: hidden;
+}
