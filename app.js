@@ -99,6 +99,5 @@ async function startup() {
 document.querySelector("#showHalf").addEventListener("click", function() {
 	document.getElementById("main_image").style.display = "inline-block";
 	document.getElementById("showHalf").style.display = "none";
-	document.getElementById("waiting").style.display = "none";
 	document.getElementById("load_img").style.display = "none";
 })
