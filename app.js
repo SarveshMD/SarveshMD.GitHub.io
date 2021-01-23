@@ -44,7 +44,7 @@ async function startup() {
     var yyyy = send_date.slice(0, 4);
     var read_date = `${dd}-${mm}-${yyyy}`;
 }
-	var response = await fetch(`https://api.nasa.gov/planetary/apod?thumbs=true&api_key=DEMO_KEY&date=${send_date}`
+	var response = await fetch(`https://api.nasa.gov/planetary/apod?thumbs=true&api_key=FW3Yre1Qb0KJCuI5xLDspAOS3oG4ddA19j7qZmsA&date=${send_date}`
   );
 	var vars = await response.json()
 	if (!response.ok || response.status != 200 || response.statusText != "OK") {
