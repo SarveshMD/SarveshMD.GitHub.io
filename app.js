@@ -30,22 +30,33 @@ function showLoading(secs){
 async function startup() {
 	var urlParams = new URLSearchParams(window.location.search);
 	var send_date = urlParams.get("d");
+
 	if (send_date == null || send_date == "") {
 		var jsDate = new Date();
-    var dd = String(jsDate.getDate()).padStart(2, "0");
-    var mm = String(jsDate.getMonth() + 1).padStart(2, "0");
-    var yyyy = String(jsDate.getFullYear());
-    var send_date = `${yyyy}-${mm}-${dd}`;
-    var read_date = `${dd}-${mm}-${yyyy}`;
-} else {
-	var send_date = urlParams.get("d");
-    var dd = send_date.slice(8);
-    var mm = send_date.slice(5, 7);
-    var yyyy = send_date.slice(0, 4);
-    var read_date = `${dd}-${mm}-${yyyy}`;
-}
-	var response = await fetch(`https://api.nasa.gov/planetary/apod?thumbs=true&api_key=FW3Yre1Qb0KJCuI5xLDspAOS3oG4ddA19j7qZmsA&date=${send_date}`
-  );
+	    var dd = String(jsDate.getDate()).padStart(2, "0");
+	    var mm = String(jsDate.getMonth() + 1).padStart(2, "0");
+	    var yyyy = String(jsDate.getFullYear());
+	    var send_date = `${yyyy}-${mm}-${dd}`;
+        var read_date = `${dd}-${mm}-${yyyy}`;
+		var response = await fetch(`https://api.nasa.gov/planetary/apod?thumbs=true&api_key=FW3Yre1Qb0KJCuI5xLDspAOS3oG4ddA19j7qZmsA&date=${send_date}`);
+		if (response.status != 200) {
+			var jsDate = new Date();
+		    var dd = String(jsDate.getDate() - 1).padStart(2, "0");
+		    var mm = String(jsDate.getMonth() + 1).padStart(2, "0");
+		    var yyyy = String(jsDate.getFullYear());
+		    var send_date = `${yyyy}-${mm}-${dd}`;
+		    var read_date = `${dd}-${mm}-${yyyy}`;
+			var response = await fetch(`https://api.nasa.gov/planetary/apod?thumbs=true&api_key=FW3Yre1Qb0KJCuI5xLDspAOS3oG4ddA19j7qZmsA&date=${send_date}`);
+		}
+	}
+	else {
+		var send_date = urlParams.get("d");
+	    var dd = send_date.slice(8);
+	    var mm = send_date.slice(5, 7);
+	    var yyyy = send_date.slice(0, 4);
+	    var read_date = `${dd}-${mm}-${yyyy}`;
+		var response = await fetch(`https://api.nasa.gov/planetary/apod?thumbs=true&api_key=FW3Yre1Qb0KJCuI5xLDspAOS3oG4ddA19j7qZmsA&date=${send_date}`);
+	}
 	var vars = await response.json()
 	if (!response.ok || response.status != 200 || response.statusText != "OK") {
 		var params = {};
@@ -61,6 +72,7 @@ async function startup() {
 		document.querySelector("#main_image").onload = function() {
 			document.querySelector("#load_img").style.display = "none";
 			document.querySelector("#waiting").style.display = "none";
+			document.querySelector("#showHalf").style.display = "none";
 			document.querySelector("#main_image").style.display = "flex";
 			document.querySelector("#main_image").src = vars.hdurl;
 		};
@@ -70,11 +82,11 @@ async function startup() {
 	else {
 		document.querySelector("#load_img").style.display = "none";
 		document.querySelector("#waiting").style.display = "none";
+		document.querySelector("#showHalf").style.display = "none";
 		document.getElementById("image_anchor").style.display = "none";
 		document.getElementById("main_image").style.display = "none";
-		document.getElementById(
-      "video_container"
-	).innerHTML = `<iframe width="1366" height="625" src="${vars.url}" allowfullscreen></iframe>`;
+		document.getElementById("video_container").innerHTML = 
+		`<iframe width="1366" height="625" src="${vars.url}" allowfullscreen></iframe>`;
 	}
 	document.getElementById("date").innerHTML = read_date;
 	document.getElementById("img_title").innerHTML = vars.title;
@@ -85,3 +97,11 @@ async function startup() {
 	}
 	document.getElementById("copyright").innerHTML = `${yyyy} ${cpright}`;
 }
+
+
+document.querySelector("#showHalf").addEventListener("click", function() {
+	document.getElementById("main_image").style.display = "inline-block";
+	document.getElementById("showHalf").style.display = "none";
+	document.getElementById("waiting").style.display = "none";
+	document.getElementById("load_img").style.display = "none";
+})

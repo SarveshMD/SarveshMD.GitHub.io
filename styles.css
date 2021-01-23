@@ -124,6 +124,26 @@ p {
 	right: 45%;
 	border: none;
 	width: 10%;
-	height: 15%;
+	height: 20%;
 	visibility: hidden;
+}
+
+#showHalf {
+	transition: 1s;
+	font-family: Source-Code-Pro;
+	border: none;
+	height : 40px;
+	width  : 300px;
+	background-color: #2E1263;
+	color:  #F69680;
+	margin-top: 0px;
+	margin-right: 60px;
+	text-align: center;
+	font-size: 19px;
+}
+
+#showHalf:hover {
+	background-color: #ff0095;
+	color: #e4d506;
+	transition: 1s;
 }
