@@ -1,3 +1,17 @@
+#outer{
+	width:100%;
+	text-align: center;
+	margin-bottom: 20px;
+	display:flex;
+	flex-direction:row;
+	align-items:center;
+	justify-content:center;
+}
+
+.inner {
+	display: inline-block;
+}
+
 body {
 	background-color: #F69680;
 	font-family: Ubuntu;
@@ -82,18 +96,6 @@ p {
 }
 
 
-#outer{
-	width:100%;
-	text-align: center;
-	margin-bottom: 20px;
-	display:flex;
-	flex-direction:row;
-	align-items:center;
-	justify-content:center;
-}
-.inner {
-	display: inline-block;
-}
 
 #go {
 	transition: 1s;

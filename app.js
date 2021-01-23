@@ -8,24 +8,21 @@ if (screen.width <= 800) {
 }
 
 startup()
-showLoading(1)
+showLoading(0)
 
-function hideLoader() {
-document.getElementById("loader").style = "visibility: hidden";
-document.getElementById("full").style = "visibility: visible";
-}
 
 function showLoading(secs){
-	secs += 1;
-		document.getElementById("loader").style = "visibility: visible";
-		document.getElementById("full").style = "visibility: hidden";
+	console.log(secs)
+	document.getElementById("loader").style.visibility = "visible";
+	document.getElementById("full").style.visibility = "hidden";
 	setTimeout(function () {
-		document.getElementById("loader").style = "visibility: hidden";
-	}, secs+2.5*1000)
+		document.getElementById("loader").style.visibility = "hidden";
+	}, secs+0.2*1000)
 	setTimeout(function() {
-		document.getElementById("full").style = "visibility: visible";
-	}, secs+3*1000)
+		document.getElementById("full").style.visibility = "visible";
+	}, secs+0.5*1000)
 }
+
 
 async function startup() {
 	var urlParams = new URLSearchParams(window.location.search);
