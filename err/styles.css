@@ -1,95 +1,101 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&family=Rubik:wght@300;400&display=swap');
+
 h1 {
-	background-image: linear-gradient(147deg,Navy 0%, Red 50%, Navy 90%);
-	font-size: 50px;
-	-webkit-background-clip: text;
-	background-clip: text;
-	color: transparent;
-	background-size: 400%;
-	animation: HeaderGradient 5s  infinite linear alternate;
-	font-family: Consolas, sans-serif;
-	margin-bottom: 0px;
+    background-image: linear-gradient(147deg, Navy 0%, Red 50%, Navy 90%);
+    font-size: 50px;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    background-size: 400%;
+    animation: HeaderGradient 5s infinite linear alternate;
+    font-family: Consolas, sans-serif;
+    margin-bottom: 0px;
 }
+
 h2 {
-	background-image: linear-gradient(147deg,Navy 0%, Red 50%, Navy 90%);
-	font-size: 40px;
-	-webkit-background-clip: text;
-	background-clip : text;
-	margin-top: 0px;
-	color: transparent;
-	background-size: 400%;
-	animation: HeaderGradient 5s  infinite linear alternate;
-	font-family: Consolas, sans-serif;
-	align-items: center;
-	margin-bottom: 30px;
+    background-image: linear-gradient(147deg, Navy 0%, Red 50%, Navy 90%);
+    font-size: 40px;
+    -webkit-background-clip: text;
+    background-clip: text;
+    margin-top: 0px;
+    color: transparent;
+    background-size: 400%;
+    animation: HeaderGradient 5s infinite linear alternate;
+    font-family: Consolas, sans-serif;
+    align-items: center;
+    margin-bottom: 30px;
 }
 
 p {
-	background-color: #FFE53B;
-	background-image: linear-gradient(147deg,Navy 0%, Red 50%, Navy 90%);
-	font-size: 30px;
-	-webkit-background-clip: text;
-	background-clip: text;
-	color: transparent;
-	background-size: 400%;
-	animation: HeaderGradient 5s  infinite linear alternate;
-	font-family: Consolas, sans-serif;
+    background-color: #FFE53B;
+    background-image: linear-gradient(147deg, Navy 0%, Red 50%, Navy 90%);
+    font-size: 30px;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    background-size: 400%;
+    animation: HeaderGradient 5s infinite linear alternate;
+    font-family: Consolas, sans-serif;
 }
 
 @keyframes HeaderGradient {
-	0% {
-		background-position: 0%;
-	}
-	100% {
-	background-position: 100%;
+    0% {
+        background-position: 0%;
+    }
+
+    100% {
+        background-position: 100%;
+    }
 }
-}
+
 body {
-	background-color: #4158D0;
-	background-image: linear-gradient( 114.2deg, rgb(0, 183, 255) 22.6%, #11f830 67.7% );
-	background-size : 400% 400%;
-	background-position: 200%;
-	animation: BodyGradient 10s ease infinite;
-	height: 90vh;
+    background-color: #4158D0;
+    background-image: linear-gradient(114.2deg, rgb(0, 183, 255) 22.6%, #11f830 67.7%);
+    background-size: 400% 400%;
+    background-position: 200%;
+    animation: BodyGradient 10s ease infinite;
+    height: 90vh;
 }
 
 @keyframes BodyGradient {
-	0% {
-		background-position: 0%;
-	}
-	50% {
-		background-position: 100%;
-	}
-	100% {
-		background-position: 0%;
-	}
+    0% {
+        background-position: 0%;
+    }
+
+    50% {
+        background-position: 100%;
+    }
+
+    100% {
+        background-position: 0%;
+    }
 }
 
 #back {
-	transition: 2s;
-	font-family: Source-Code-Pro;
-	height : 50px;
-	width  : 100px;
-	background-color: #2E1263;
-	color:  #F69680;
-	text-align: center;
-	font-size: 30px;
-	border : none;
-	display: flex;
-	flex-direction: row;
-	justify-content: center;
-	align-items: center;
+    transition: 2s;
+    font-family: Source-Code-Pro;
+    height: 50px;
+    width: 100px;
+    background-color: #2E1263;
+    color: #F69680;
+    text-align: center;
+    font-size: 30px;
+    border: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }
 
 #back:hover {
-	transition: 2s;
-	background-color: #940c82;
-	color: #F69680;
+    transition: 2s;
+    background-color: #940c82;
+    color: #F69680;
 }
 
 #content {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
