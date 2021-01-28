@@ -15,6 +15,7 @@
 body {
     background-color: #F69680;
     font-family: Ubuntu;
+    overflow: hidden;
 }
 
 #main_image {
@@ -46,6 +47,7 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    visibility: hidden;
 }
 
 h1 {
@@ -127,7 +129,7 @@ p {
     border: none;
     width: 10%;
     height: 20%;
-    visibility: hidden;
+    visibility: visible;
 }
 
 #showHalf {
@@ -149,3 +151,23 @@ p {
     color: #e4d506;
     transition: 1s;
 }
+
+/*#switch {
+    transition: 1s;
+    font-family: Source-Code-Pro;
+    border: none;
+    height: 40px;
+    width: 300px;
+    background-color: #2E1263;
+    color: #F69680;
+    margin-top: 0px;
+    margin-right: 60px;
+    text-align: center;
+    font-size: 19px;
+}
+
+#switch:hover {
+    background-color: #ff0095;
+    color: #e4d506;
+    transition: 1s;
+}*/

@@ -8,23 +8,37 @@
     <title>Astronomy Picture of the Day</title>
     <script src="resources/jquery.min.js"></script>
     <link rel="stylesheet" href="styles.css">
-    <link rel="shortcut icon" href="imgs/favicon.ico">
+    <link rel="shortcut icon" type="image/ico" href="imgs/favicon.ico">
 </head>
 
 <body>
     <img id="loader" src="imgs/loading.gif" alt="Loading...">
     <span id=full>
-        <h1>NASA's Astronomy Picture of the Day for <span id="date"></span></h1>
+        <h1>
+            NASA's Astronomy Picture of the Day for <span id="date"></span>
+        </h1>
         <h2 id="img_title"></h2>
         <p id="explanation"></p>
         <div id="outer">
             <form action="">
-                <div class="inner"><input name="d" type="date" id="selectdate"></input></div>
-                <div class="inner"><button type="submit" id="go">GO</button></div>
-                <div class="inner"><button id="showHalf" type="button">Show partially loaded image</button></div>
+                <div class="inner">
+                    <input name="d" type="date" id="selectdate" min="1995-06-16" max="" required></input>
+                </div>
+                <div class="inner">
+                    <button type="submit" id="go">GO</button>
+                </div>
+                <div class="inner">
+                    <button id="showHalf" type="button">Show partially loaded image</button>
+                </div>
+            <!--<div class="inner">
+                    <button id="switch" type="button">Show HD Image</button>
+                </div> 
+            -->
             </form>
         </div>
-        <p id=waiting>Loading image...</p>
+        <p id=waiting>
+            Loading image...
+        </p>
         <img id="load_img" src="imgs/loading.gif" alt="Loading...">
         <a id="image_anchor" href="" target="_blank" rel="noopener noreferrer">
             <img id="main_image" src="" alt="Image">
