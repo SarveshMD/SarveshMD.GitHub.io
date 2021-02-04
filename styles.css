@@ -10,6 +10,11 @@
 	justify-content: center;
 }
 
+label {
+	color: #63012a;
+	font-size: 30px;
+}
+
 .inner {
 	display: inline-block;
 }
@@ -112,7 +117,6 @@ h2::selection {
 	text-align: center;
 	content: "";
 	font-size: 19px;
-	margin-left: 60px;
 }
 
 #selectdate:hover {
