@@ -5,7 +5,7 @@ if (screen.width <= 800) {
 		hideButton: true,
 	};
 	var rdurl = `err/?${jQuery.param(err_params)}`;
-	location.replace(rdurl);
+	// location.replace(rdurl);
 }
 
 var seconds = 1.5;
