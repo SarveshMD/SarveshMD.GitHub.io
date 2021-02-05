@@ -17,8 +17,8 @@ label {
 
 .inner {
 	display: inline-block;
+	/* color: hsl(226, 100%, 50%); */
 }
-
 body {
 	background-color: #f69680;
 	font-family: Ubuntu;
@@ -29,11 +29,11 @@ body {
 	transition: 0.5s;
 	display: none;
 	width: 900px;
-	height: 720px;
 	border: 2px solid #ff0095;
 }
 
-#main_image:hover {
+#main_image:hover,
+#main_image:focus {
 	transition: 0.5s;
 	border: 2px solid #2e1263;
 }
@@ -63,7 +63,7 @@ body {
 
 h1 {
 	color: #2e1263;
-	font-size: 3rem;
+	font-size: 48px;
 	margin-bottom: 10px;
 	margin-top: 10px;
 }
@@ -75,7 +75,7 @@ h1::selection {
 
 h2 {
 	color: #e20c77;
-	font-size: 2rem;
+	font-size: 32px;
 	margin-top: 10px;
 	margin-bottom: 10px;
 }
@@ -115,18 +115,11 @@ h2::selection {
 	color: #f69680;
 	margin-top: 0px;
 	text-align: center;
-	content: "";
 	font-size: 19px;
 }
 
-#selectdate:hover {
-	background-color: #ff0095;
-	color: #e4d506;
-	transition: 1s;
-}
-
+#selectdate:hover,
 #selectdate:focus {
-	outline: none;
 	background-color: #ff0095;
 	color: #e4d506;
 	transition: 1s;
@@ -135,10 +128,7 @@ h2::selection {
 #go {
 	outline: none;
 	transition: 1s;
-	border-left: 2px solid #f69680;
-	border-right: none;
-	border-top: none;
-	border-bottom: none;
+	border: none;
 	height: 40px;
 	width: 50px;
 	background-color: #2e1263;
@@ -149,12 +139,7 @@ h2::selection {
 	font-size: 19px;
 }
 
-#go:hover {
-	background-color: #ff0095;
-	color: #e4d506;
-	transition: 1s;
-}
-
+#go:hover,
 #go:focus {
 	background-color: #ff0095;
 	color: #e4d506;
@@ -186,12 +171,7 @@ h2::selection {
 	font-size: 19px;
 }
 
-#showHalf:hover {
-	background-color: #ff0095;
-	color: #e4d506;
-	transition: 1s;
-}
-
+#showHalf:hover,
 #showHalf:focus {
 	background-color: #ff0095;
 	color: #e4d506;
@@ -225,7 +205,8 @@ form {
     font-size: 19px;
 }
 
-#switch:hover {
+#switch:hover,
+#switch:focus {
     background-color: #ff0095;
     color: #e4d506;
     transition: 1s;

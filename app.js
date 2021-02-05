@@ -1,11 +1,34 @@
 if (screen.width <= 800) {
-	var err_params = {
-		status_code: 401,
-		message: "Please try again with a device with bigger screen.",
-		hideButton: true,
-	};
-	var rdurl = `err/?${jQuery.param(err_params)}`;
-	// location.replace(rdurl);
+	var header = document.querySelector("h1");
+	var imageHeader = document.querySelector("h2");
+	var openLoader = document.querySelector("#loader");
+	var enterDate = document.querySelector("label");
+	var image = document.querySelector("#main_image");
+	var selectDate = document.querySelector("#selectdate");
+	var go = document.querySelector("#go");
+	var showHalf = document.querySelector("#showHalf");
+
+	openLoader.style.width = "30%";
+	openLoader.style.right = "38%";
+	header.style.fontSize = "30px";
+	imageHeader.style.fontSize = "25px";
+	image.style.width = "340px";
+	enterDate.style.fontSize = "30px";
+	enterDate.style.color = "hsl(226, 100%, 50%)";
+	selectDate.style.width = "300px";
+	go.style.position = "relative";
+	go.style.left = "00px";
+	go.style.margin = "10px 0 0 0";
+	showHalf.style.margin = "10px 0 0 0";
+	showHalf.style.position = "relative";
+	showHalf.style.left = "0px";
+	header.innerHTML += "<br>";
+	var jsDate = new Date();
+	var dd = String(jsDate.getDate()).padStart(2, "0");
+	var mm = String(jsDate.getMonth() + 1).padStart(2, "0");
+	var yyyy = String(jsDate.getFullYear());
+	var send_date = `${yyyy}-${mm}-${dd}`;
+	selectDate.value = send_date;
 }
 
 var seconds = 1.5;
@@ -21,6 +44,7 @@ startup();
 async function startup() {
 	var urlParams = new URLSearchParams(document.location.search);
 	var send_date = urlParams.get("d");
+	document.getElementById("selectdate").value = send_date;
 	document.getElementById("selectdate").max = new Date().toISOString().split("T")[0];
 	if (send_date == null) {
 		var jsDate = new Date();
@@ -29,6 +53,7 @@ async function startup() {
 		var yyyy = String(jsDate.getFullYear());
 		var send_date = `${yyyy}-${mm}-${dd}`;
 		var read_date = `${dd}-${mm}-${yyyy}`;
+		document.getElementById("selectdate").value = send_date;
 		var response = await fetch(`https://api.nasa.gov/planetary/apod?thumbs=true&api_key=FW3Yre1Qb0KJCuI5xLDspAOS3oG4ddA19j7qZmsA&date=${send_date}`);
 		if (response.status != 200) {
 			var jsDate = new Date();
