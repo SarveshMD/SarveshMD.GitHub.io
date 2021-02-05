@@ -17,8 +17,8 @@ label {
 
 .inner {
 	display: inline-block;
-	/* color: hsl(226, 100%, 50%); */
 }
+
 body {
 	background-color: #f69680;
 	font-family: Ubuntu;
@@ -30,6 +30,7 @@ body {
 	display: none;
 	width: 900px;
 	border: 2px solid #ff0095;
+	outline: none;
 }
 
 #main_image:hover,
@@ -94,15 +95,38 @@ h2::selection {
 #explanation::selection {
 	background-color: #63012a;
 	color: #f69680;
+	margin: 1px;
 }
 
-#copyright {
+footer {
 	color: rgb(85, 0, 134);
 }
 
-#copyright::selection {
+#copyright::selection,
+#learnMore::selection,
+#learnMore a::selection {
 	background-color: rgb(85, 0, 134);
 	color: #f69680;
+}
+
+#copyright,
+#learnMore {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+}
+
+#learnMore a {
+	transition: 1s;
+	color: hsl(270, 100%, 50%);
+	font-size: 20px;
+}
+
+#learnMore a:hover {
+	transition: 1s;
+	color: #f69680;
+	background-color: hsl(270, 100%, 50%);
 }
 
 #selectdate {
@@ -116,6 +140,7 @@ h2::selection {
 	margin-top: 0px;
 	text-align: center;
 	font-size: 19px;
+	outline: none;
 }
 
 #selectdate:hover,

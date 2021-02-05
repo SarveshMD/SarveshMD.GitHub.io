@@ -12,7 +12,7 @@
 
 	<body>
 		<img id="loader" src="imgs/loading.gif" alt="Loading..." />
-		<span id="full">
+		<main id="full">
 			<h1>NASA's Astronomy Picture of the Day for <span id="date"></span></h1>
 			<h2 id="img_title"></h2>
 			<p id="explanation"></p>
@@ -29,9 +29,8 @@
 						<button id="showHalf" type="button">Show partially loaded image</button>
 					</div>
 					<!--<div class="inner">
-                    <button id="switch" type="button">Show HD Image</button>
-                </div>
-            -->
+                    	<button id="switch" type="button">Show HD Image</button>
+                	</div>-->
 				</form>
 			</div>
 			<p id="waiting">Loading image...</p>
@@ -40,8 +39,11 @@
 				<img id="main_image" src="" alt="Image" />
 			</a>
 			<div id="video_container"></div>
-			<p id="copyright">Copyright: &copy;</p>
-		</span>
+			<footer>
+				<p id="learnMore">Learn more about Astronomy Picture Of the Day (APOD)&nbsp;<a href="https://apod.nasa.gov/apod/lib/aptree.html" target="_blank" rel="noopener noreferrer">Here</a></p>
+				<p id="copyright">Copyright: &copy;</p>
+			</footer>
+		</main>
 		<script src="app.js" type="text/javascript"></script>
 	</body>
 </html>
