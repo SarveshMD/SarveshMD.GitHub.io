@@ -28,7 +28,7 @@ body {
 #main_image {
 	transition: 0.5s;
 	display: none;
-	width: 900px;
+	width: 100vw;
 	border: 2px solid #ff0095;
 	outline: none;
 }
