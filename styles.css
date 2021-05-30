@@ -26,17 +26,10 @@ body {
 }
 
 #main_image {
-	transition: 0.5s;
 	display: none;
 	width: 100vw;
-	border: 2px solid #ff0095;
-	outline: none;
-}
-
-#main_image:hover,
-#main_image:focus {
-	transition: 0.5s;
 	border: 2px solid #2e1263;
+	outline: none;
 }
 
 #load_img {
@@ -146,8 +139,8 @@ footer {
 
 #selectdate:hover,
 #selectdate:focus {
-	background-color: #ff0095;
-	color: #e4d506;
+	background-color: #2e1263;
+	color: #ffff00;
 	transition: 1s;
 }
 
@@ -167,8 +160,8 @@ footer {
 
 #go:hover,
 #go:focus {
-	background-color: #ff0095;
-	color: #e4d506;
+	background-color: #2e1263;
+	color: #ffff00;
 	transition: 1s;
 }
 
@@ -199,8 +192,8 @@ footer {
 
 #showHalf:hover,
 #showHalf:focus {
-	background-color: #ff0095;
-	color: #e4d506;
+	background-color: #2e1263;
+	color: #ffff00;
 	transition: 1s;
 }
 
