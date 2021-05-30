@@ -99,7 +99,6 @@ async function startup() {
 		document.getElementById("showHalf").style.display = "none";
 		document.getElementById("image_anchor").style.display = "none";
 		document.getElementById("main_image").style.display = "none";
-		// document.getElementById("switch").style.display = "none";
 		document.getElementById("video_container").innerHTML = `<iframe width="1366" height="625" src="${vars.url}" allowfullscreen></iframe>`;
 	}
 	document.querySelector("h1").innerHTML += read_date;
@@ -118,9 +117,3 @@ document.getElementById("showHalf").addEventListener("click", function () {
 	document.getElementById("showHalf").style.display = "none";
 	document.getElementById("load_img").style.display = "none";
 });
-
-// document.getElementById("switch").addEventListener("click", function() {
-//     var url = window.location.href;
-//     url += "&hd=true";
-//     location.replace(url);
-// })

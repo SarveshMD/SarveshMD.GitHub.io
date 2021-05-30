@@ -14,8 +14,10 @@
 	<body>
 		<img id="loader" src="imgs/loading.gif" alt="Loading..." />
 		<main id="full">
-			<h1>NASA's Astronomy Picture of the Day for <span id="date"></span></h1>
-			<h2 id="img_title"></h2>
+			<header>
+				<h1>NASA's Astronomy Picture of the Day for <span id="date"></span></h1>
+				<h2 id="img_title"></h2>
+			</header>
 			<p id="explanation"></p>
 			<div id="outer">
 				<form action="">
@@ -29,9 +31,6 @@
 					<div class="inner">
 						<button id="showHalf" type="button">Show partially loaded image</button>
 					</div>
-					<!--<div class="inner">
-                    	<button id="switch" type="button">Show HD Image</button>
-                	</div>-->
 				</form>
 			</div>
 			<p id="waiting">Loading image...</p>

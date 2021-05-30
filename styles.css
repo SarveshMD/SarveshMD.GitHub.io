@@ -216,23 +216,3 @@ form {
 	-o-user-select: none;
 	user-select: none;
 }
-
-/*#switch {
-    transition: 1s;
-    border: none;
-    height: 40px;
-    width: 300px;
-    background-color: #2E1263;
-    color: #F69680;
-    margin-top: 0px;
-    margin-right: 60px;
-    text-align: center;
-    font-size: 19px;
-}
-
-#switch:hover,
-#switch:focus {
-    background-color: #ff0095;
-    color: #e4d506;
-    transition: 1s;
-}*/
