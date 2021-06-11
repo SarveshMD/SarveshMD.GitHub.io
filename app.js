@@ -83,7 +83,7 @@ async function startup() {
 	}
 	if (vars.media_type != "video") {
 		document.getElementById("main_image").src = vars.hdurl;
-		document.getElementById("load_img").src = "imgs/loading.gif";
+		document.getElementById("load_img").src = "images/loading.gif";
 		document.getElementById("main_image").onload = function () {
 			document.getElementById("load_img").style.display = "none";
 			document.getElementById("waiting").style.display = "none";
